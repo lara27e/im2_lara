@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: white;
+  }
+
+  .ph_klein {
+    background-color: #d3d3d3;
+    width: 500px;
+    height: 379px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding: 20px 20px 0px;
+    margin-left: 2rem;
+    box-sizing: border-box;
+    gap: 20px;
+  }
+
+  .ph_hoch {
+        background-color: #d3d3d3;
+        width: 300px;
+        height: 619px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        padding: 20px 20px 0px;
+        margin-left: 20px;
+        box-sizing: border-box;
+        gap: 20px;
+  }
+
+  .fenster {
+        width: 20px;
+        position: relative;
+        background-color: #848484;
+        height: 20px;
+        overflow: hidden;
+        flex-shrink: 0;
+  }
+
+  .tuer {
+    width: 40px;
+    position: relative;
+    background-color: #848484;
+    height: 39px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  
+  .title-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 2rem;
+    max-width: 100%;
+    position: sticky;
+    top: 0;
+    background: white; /* wichtig, damit es nicht durchscheint */
+    z-index: 10; /* damit es über den anderen Elementen bleibt */    
+      
+  }
+  
+  .title-left h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #5a5a5a;
+    margin: 0;
+    line-height: 1.1;
+  }
+  
+  .title-left p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: #bcbcbc;
+    font-weight: 600;
+    margin: 0.5rem 0 0 0;
+  }
+  
+  .scroll-hint {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: #c8c8c8;
+    font-weight: 600;
+    white-space: nowrap;
+    align-self: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  main {
+    overflow-x: auto;
+    width: 100vw;
+  }
+
+  section {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+    align-items: flex-end;
+    padding: 5px;
+    width: max-content;
+  }
+
+  .parkhaus {
+    width: 300px;
+    height: 400px;
+    background-color: hotpink;
+    border: 3px chartreuse solid;
+  }
+
+  @media (max-width: 1200px) {
+    .parkhaus {
+      width: 250px;
+      height: 350px;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .parkhaus {
+      width: 180px;
+      height: 280px;
+    }
+  }
