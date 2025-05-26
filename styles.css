@@ -6,8 +6,8 @@ body {
 
   .ph_klein {
     background-color: #d3d3d3;
-    width: 500px;
-    height: 379px;
+    width: 400px;
+    height: 303px;
     overflow: hidden;
     display: flex;
     flex-direction: row;
@@ -15,16 +15,15 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     align-content: flex-start;
-    padding: 20px 20px 0px;
-    margin-left: 2rem;
+    padding: 16px 16px 0px;
     box-sizing: border-box;
-    gap: 20px;
+    gap: 16px;
   }
 
   .ph_hoch {
         background-color: #d3d3d3;
-        width: 300px;
-        height: 619px;
+        width: 240px;
+        height: 495px;
         overflow: hidden;
         display: flex;
         flex-direction: row;
@@ -32,29 +31,28 @@ body {
         justify-content: center;
         flex-wrap: wrap;
         align-content: flex-start;
-        padding: 20px 20px 0px;
-        margin-left: 20px;
+        padding: 16px 16px 0px;
         box-sizing: border-box;
-        gap: 20px;
+        gap: 16px;
   }
 
   .fenster {
-        width: 20px;
+        width: 16px;
         position: relative;
         background-color: #848484;
-        height: 20px;
+        height: 16px;
         overflow: hidden;
         flex-shrink: 0;
   }
 
   .tuer {
-    width: 40px;
+    width: 32px;
     position: relative;
     background-color: #848484;
-    height: 39px;
+    height: 31px;
     overflow: hidden;
     flex-shrink: 0;
-  }
+  } */
   
   .title-section {
     display: flex;
@@ -62,12 +60,68 @@ body {
     align-items: flex-start;
     flex-wrap: wrap;
     padding: 2rem;
+    margin-left: 16px;
     max-width: 100%;
     position: sticky;
     top: 0;
     background: white; /* wichtig, damit es nicht durchscheint */
-    z-index: 10; /* damit es über den anderen Elementen bleibt */    
-      
+    z-index: 10; /* damit es über den anderen Elementen bleibt */     
+  }
+
+  .ph_wrapper {
+    position: relative;
+    display: inline-block;
+    margin-left: 30px;
+  }
+
+  .sign_klein {
+    position: absolute;
+    top: -71px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #777;
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-align: center;
+  }
+
+  .sign_hoch {
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #777;
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  
+  /* Optional: Stützen darunter */
+  .sign_klein::before,
+  .sign_klein::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    width: 8px;
+    height: 20px;
+    background-color: #777;
+  }
+  
+  .sign_klein::before {
+    left: 20px;
+  }
+  
+  .sign_klein::after {
+    right: 20px;
   }
   
   .title-left h1 {
@@ -75,7 +129,7 @@ body {
     font-weight: 900;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: #5a5a5a;
-    margin: 0;
+    margin: 16px;
     line-height: 1.1;
   }
   
@@ -83,7 +137,7 @@ body {
     font-size: clamp(1rem, 2vw, 1.5rem);
     color: #bcbcbc;
     font-weight: 600;
-    margin: 0.5rem 0 0 0;
+    margin-left: 16px;
   }
   
   .scroll-hint {
@@ -94,7 +148,27 @@ body {
     align-self: center;
     margin-top: 20px;
     margin-bottom: 20px;
+    margin-left: 16px;
+    margin-right: 16px;
   }
+
+  .title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+  
+  .title-row h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #5a5a5a;
+    margin: 16px 16px 0 16px;
+    line-height: 1.1;
+  }
+  
 
   main {
     overflow-x: auto;
@@ -104,9 +178,8 @@ body {
   section {
     display: flex;
     justify-content: left;
-    gap: 20px;
+    gap: 30px;
     align-items: flex-end;
-    padding: 5px;
     width: max-content;
   }
 
@@ -130,3 +203,71 @@ body {
       height: 280px;
     }
   }
+
+  .car-gallery {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    position: relative;
+    height: 100px; /* Höhe der Galerie */
+  }
+  
+  .car-track {
+    display: inline-block;
+    animation: scroll 30s linear infinite;
+  }
+  
+  .car {
+    width: 50px;
+    margin-right: 400px;
+  }
+  /*
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    } 
+  } */
+ 
+  .autobahn {
+    width: calc(8 * 400px + 7 * 240px + 14 * 30px); /* passt zur realen Breite der Parkhäuser */
+    height: 60px; /* Höhe der Fahrbahn */
+    overflow: hidden;
+    position: relative;
+    margin-top: 20px; /* Abstand zu den Parkhäusern */
+  }
+
+  .parkhaus-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-right: 16px; /* Lücke zwischen den Parkhäusern */
+  }
+  
+  .autobahn-overlay {
+    position: absolute;
+    top: 475px; /* nach Bedarf anpassen – z. B. 20px tiefer für perfekte Position */
+    left: 0;
+    width: 100%;
+    height: 50px; /* Höhe der Spur */
+    pointer-events: none; /* Autos nicht klickbar */
+    z-index: 10; /* damit Autos vor dem Parkhaus sind */
+  }
+  
+  .autobahn-track {
+    display: flex;
+    width: max-content;
+    animation: auto-scroll 15s linear infinite;
+    align-items: center;
+  }
+
+  @keyframes auto-scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-75%);
+    }
+  }
+  
