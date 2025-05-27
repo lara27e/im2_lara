@@ -233,16 +233,17 @@ body {
     position: absolute;
     top: 554px; /* nach Bedarf anpassen – z. B. 20px tiefer für perfekte Position */
     left: 0;
-    width: 100%;
     height: 50px; /* Höhe der Spur */
     pointer-events: none; /* Autos nicht klickbar */
     z-index: 10; /* damit Autos vor dem Parkhaus sind */
+    width: 5400px;
+    overflow: hidden;
   }
   
   .autobahn-track {
     display: flex;
     width: max-content;
-    animation: auto-scroll 15s linear infinite;
+    animation: auto-scroll 30s linear infinite;
     align-items: center;
   }
 
