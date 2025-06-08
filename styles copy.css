@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     font-family: sans-serif;
@@ -64,8 +65,8 @@ body {
     max-width: 100%;
     position: sticky;
     top: 0;
-    background: white; 
-    z-index: 10;      
+    background: white; /* wichtig, damit es nicht durchscheint */
+    z-index: 10; /* damit es über den anderen Elementen bleibt */     
   }
 
   .ph_wrapper {
@@ -88,6 +89,7 @@ body {
     text-align: center;
   }  
   
+  /* Optional: Stützen darunter */
   .sign::before,
   .sign::after {
     content: "";
@@ -192,7 +194,7 @@ body {
     white-space: nowrap;
     width: 100%;
     position: relative;
-    height: 100px;
+    height: 100px; /* Höhe der Galerie */
   }
   
   .car-track {
@@ -204,28 +206,37 @@ body {
     width: 50px;
     margin-right: 400px;
   }
+  /*
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    } 
+  } */
  
   .autobahn {
-    width: calc(8 * 400px + 7 * 240px + 14 * 30px); 
-    height: 60px; 
+    width: calc(8 * 400px + 7 * 240px + 14 * 30px); /* passt zur realen Breite der Parkhäuser */
+    height: 60px; /* Höhe der Fahrbahn */
     overflow: hidden;
     position: relative;
-    margin-top: 20px; 
+    margin-top: 20px; /* Abstand zu den Parkhäusern */
   }
 
   .parkhaus-wrapper {
     position: relative;
     display: inline-block;
-    margin-right: 16px; 
+    margin-right: 16px; /* Lücke zwischen den Parkhäusern */
   }
   
   .autobahn-overlay {
     position: absolute;
-    top: 554px; 
+    top: 554px; /* nach Bedarf anpassen – z. B. 20px tiefer für perfekte Position */
     left: 0;
-    height: 50px; 
-    pointer-events: none; 
-    z-index: 10; 
+    height: 50px; /* Höhe der Spur */
+    pointer-events: none; /* Autos nicht klickbar */
+    z-index: 10; /* damit Autos vor dem Parkhaus sind */
     width: 5400px;
     overflow: hidden;
   }
